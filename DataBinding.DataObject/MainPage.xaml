@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataBinding.DataObject.MainPage">
+
+
+    <Grid
+        Margin="10"
+        BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <VerticalStackLayout
+        Grid.Row="0"
+        Grid.Column="0">
+            <Label
+        
+        Text="CONTEO"
+        FontAttributes="Bold"
+        TextColor="White"
+        HorizontalTextAlignment="Center"
+     />
+
+            <Border
+        Margin="0,20,0,30"
+        Stroke="White"
+        StrokeThickness="5"
+        BackgroundColor="Black"
+        >
+                <Label
+            Text="{Binding Path=Conteo}"
+            FontSize="Header"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center"
+            Margin="0,25"
+            x:Name="ConteoLabel"
+        />
+            </Border>
+
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+        Grid.Row="1"
+        Grid.Column="0"
+        HorizontalOptions="Center"       
+        Spacing="100"
+     >
+
+            <Button
+        FontSize="Medium"
+        TextColor="Red"
+        FontAttributes="Bold"
+        Text="CONTAR"
+        
+        BackgroundColor="Black"
+        Clicked="Button_Clicked"
+     />
+
+            <Button
+        Text="REINICIAR"
+        TextColor="Red"
+        FontAttributes="Bold"
+        FontSize="Medium"
+       
+        BackgroundColor="Black"
+        Clicked="Button_Clicked_1"
+     />
+
+        </HorizontalStackLayout>
+    </Grid>
+
+
+</ContentPage>
