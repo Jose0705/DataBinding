@@ -22,7 +22,7 @@
                       Grid.Row="0"
                       Grid.Column="1"
                       BackgroundColor="LightGray"
-                      TextChanged="Entry_TextChanged"
+                      
                       x:Name="TextEntry"/>
 
             </Grid>
@@ -32,11 +32,11 @@
                 <Label
                     Text="Esto es lo que escribiste: "/>
                 <Label
-                    Text="Aqui se va a ver lo que escribiste"
+                    Text="{Binding Source={x:Reference TextEntry},Path=Text}"
                     HorizontalOptions="Center"
                     FontSize="Small"
                     FontAttributes="Italic"
-                    x:Name="EnteredTextLabel"/>
+                   />
 
             </VerticalStackLayout>
 
