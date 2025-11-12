@@ -14,29 +14,28 @@
                 ColumnDefinitions="Auto,*"
                 ColumnSpacing="8">
                 <Label
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       Text="Escriba lo que piense: "
-                       VerticalOptions="Center"/>
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Escriba lo que piense: "
+                VerticalOptions="Center"/>
                 <Entry
-                      Grid.Row="0"
-                      Grid.Column="1"
-                      BackgroundColor="LightGray"
-                      
-                      x:Name="TextEntry"/>
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="LightGray"    
+                x:Name="TextEntry"/>
 
             </Grid>
             <VerticalStackLayout
-                  Grid.Row="1"
-                  Grid.Column="0">
+                Grid.Row="1"
+                Grid.Column="0">
                 <Label
-                    Text="Esto es lo que escribiste: "/>
+                Text="Esto es lo que escribiste: "/>
                 <Label
-                    Text="{Binding Source={x:Reference TextEntry},Path=Text}"
-                    HorizontalOptions="Center"
-                    FontSize="Small"
-                    FontAttributes="Italic"
-                   />
+                Text="{Binding Source={x:Reference TextEntry},Path=Text}"
+                HorizontalOptions="Center"
+                FontSize="Small"
+                FontAttributes="Italic"
+            />
 
             </VerticalStackLayout>
 
